@@ -1,0 +1,42 @@
+{% extends "base.html" %} {% block content %}
+	
+<div class="main">
+  <div class="title">
+    <h1 align='center'>Birds Species Classification  (BSC) Image Classifier</h1>
+    <h2>
+		<b>Problem Statement:</b>
+	</h2>
+	<p align='justify'>we proposal System for Bird species Classification is a challenging problem due to the variation and different viewpoint of camera. In the existing system we some disadvantages, we are overcome by Integrated the new feature into the multi-scale Convoluted Neural Network with Image Segmentation for Indian bird species classification algorithm is proposed to get the final classification result. We are proposed new feature can improve the correct classification rate of model as well as accuracy of model in predication of Birds classification. In this challenge, the bird image classification task, especially for Indian birds, based on a limited but a diverse set of crowd-sourced data. Especially, the present challenge involves a low amount of labelled data to build good classification approaches for effective classification.</p>
+		
+	<h2>
+		<b>Existing System:</b>
+	</h2>
+	<p align='justify'>Bird species recognition is a challenging problem due to the variant illumination and different viewpoint of camera. In this paper, a new feature which is the ratio between the distance of the eye to the root of beak and the distance of the width of the beak is used to distinguish the different bird species. Integrated the new feature into the multi-scale decision tree and the SVM framework, a new bird species recognition algorithm is proposed to get the final recognition result. The Experiment results show that the proposed new feature can improve the correct classification rate about nine percent.</p>
+	
+  </div>
+  
+
+  <div class="panel">
+    <input id="file-upload" class="hidden" type="file" accept="image/x-png,image/gif,image/jpeg" />
+    <label for="file-upload" id="file-drag" class="upload-box">
+      <div id="upload-caption">Drop image here or click to select</div>
+      <img id="image-preview" class="hidden"/>
+    </label>
+  </div>
+  <div style="margin-bottom: 2rem;">
+    <input type="button" value="Submit" class="button" onclick="submitImage();" />
+    <input type="button" value="Clear" class="button" onclick="clearImage();" />
+  </div>
+
+  <div id="image-box">
+    <img id="image-display" />
+    <div id="pred-result" class="hidden"></div>
+    <svg id="loader" class="hidden" viewBox="0 0 32 32" width="50" height="32">
+      <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+    </svg>
+  </div>
+</div>
+
+{% endblock %}
+
+
